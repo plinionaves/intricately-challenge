@@ -1,0 +1,26 @@
+@import './colors';
+@import './variables';
+
+.btn {
+  border: none;
+  text-align: center;
+  min-width: 100px;
+  height: 40px;
+  border-radius: $radius;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: $secondary;
+  text-transform: uppercase;
+  margin: 5px auto;
+}
+
+.btn[disabled] {
+  background-color: $light;
+  color: $secondary;
+}
+
+.btn__info {
+  background-color: $primary;
+  color: white;
+}

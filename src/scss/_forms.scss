@@ -1,0 +1,33 @@
+@import './colors';
+@import './variables';
+
+.form {
+  margin: 15px 0;
+}
+
+.form__group {
+  label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin: 5px 0;
+  }
+  input, textarea {
+    min-width: 450px;
+    padding: 5px;
+    color: $secondary;
+    height: 40px;
+    border: 1px solid $light;
+    margin-bottom: 25px;
+    border-radius: $radius;
+    box-shadow: 0 0 3px $light;
+  }
+  textarea {
+    width: 100%;
+    min-height: 150px;
+  }
+}
+
+::placeholder {
+  color: $light;
+}

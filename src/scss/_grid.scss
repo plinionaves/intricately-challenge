@@ -1,3 +1,5 @@
+@import './mixins';
+
 $grid-columns: 12;
 $grid-gutter: 2%;
 
@@ -15,6 +17,7 @@ $grid-gutter: 2%;
 [class*="col-"] {
   float: left;
   padding: 0 $grid-gutter;
+  @include clearfix;
 }
 
 @for $i from 1 to $grid-columns {

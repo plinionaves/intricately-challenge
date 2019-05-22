@@ -1,0 +1,58 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Microsoft",
+      "spend": 150000,
+      "minSpend": 100000,
+      "maxSpend": 300000,
+      "note": ""
+    },
+    {
+      "name": "Teste",
+      "spend": "44454",
+      "minSpend": "45454",
+      "note": "fdgdfgfdg",
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "name": "Teste",
+      "spend": 50,
+      "minSpend": 60660,
+      "note": "Hahahaa",
+      "id": 4
+    },
+    {
+      "name": "Nova",
+      "spend": 50,
+      "minSpend": 60,
+      "note": "mais um",
+      "id": 5
+    },
+    {
+      "name": "Majkdfd",
+      "spend": 505,
+      "minSpend": 6060,
+      "note": "fdgfgdf",
+      "id": 6
+    },
+    {
+      "name": "PLJN",
+      "spend": 50005.5,
+      "minSpend": 50,
+      "maxSpend": 0,
+      "id": 7
+    },
+    {
+      "name": "My Comp",
+      "spend": 508,
+      "minSpend": 50,
+      "maxSpend": 80,
+      "note": "Teste",
+      "id": 8
+    }
+  ]
+}

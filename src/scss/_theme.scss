@@ -1,6 +1,8 @@
 @import './colors';
 @import './buttons';
+@import './forms';
 @import './reset';
+@import './utils';
 
 h1, h2, h3, h4, h5, h6, p, a, span, div {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -10,4 +12,8 @@ h1, h2, h3, h4, h5, h6, p, a, span, div {
 p {
   font-size: 1rem;
 }
+
+.box {
+  border: 1px solid $light;
+  border-radius: 10px;
 }
