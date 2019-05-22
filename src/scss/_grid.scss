@@ -1,0 +1,24 @@
+$grid-columns: 12;
+$grid-gutter: 2%;
+
+.container {
+  width: 1024px;
+  margin: auto;
+}
+
+.row {
+  margin: 25px 0;
+  display: block;
+  clear: both;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 0 $grid-gutter;
+}
+
+@for $i from 1 to $grid-columns {
+  .col-#{$i} {
+    width: 100% / $grid-columns * $i;
+  }
+}
