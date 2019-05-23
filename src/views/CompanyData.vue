@@ -36,6 +36,22 @@
           placeholder="e.g. $150,000 - $330,000"
         >
       </div>
+      <div class="form__group">
+        <label>Company Location</label>
+        <input
+          type="text"
+          v-model.trim="$v.company.location.$model"
+          placeholder="e.g. Your Company Location"
+        >
+      </div>
+      <div class="form__group">
+        <label>Company Category</label>
+        <input
+          type="text"
+          v-model.trim="$v.company.category.$model"
+          placeholder="e.g. Your Company Category"
+        >
+      </div>
 
       <div>
         <button
@@ -54,7 +70,7 @@
           </div>
           <button
             type="button"
-            class="btn btn__info float--right"
+            class="btn btn__info"
             @click="showModal = !showModal"
           >Save</button>
         </Modal>
@@ -63,7 +79,7 @@
       <div class="form__group">
         <button
           type="submit"
-          class="btn btn__info float--right"
+          class="btn btn__info"
           :disabled="$v.$invalid"
         >Save</button>
       </div>
@@ -93,7 +109,9 @@ export default {
       spend: undefined,
       minSpend: undefined,
       maxSpend: undefined,
-      note: undefined
+      note: undefined,
+      location: undefined,
+      category: undefined
     },
     companyDisplayValues: {
       spend: undefined,
@@ -107,7 +125,9 @@ export default {
       spend: { required, positiveNumber },
       minSpend: { required, positiveNumber },
       maxSpend: { required, positiveNumber },
-      note: {}
+      note: {},
+      location: { required },
+      category: { required }
     }
   },
   created () {
@@ -163,6 +183,7 @@ export default {
       try {
         const res = await this.createCompany({ company: this.company })
         console.log('Created: ', res)
+        this.$router.push('/dashboard/company/table')
         this.reset()
       } catch (e) {
         console.log('Error: ', e)

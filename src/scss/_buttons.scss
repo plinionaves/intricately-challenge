@@ -18,6 +18,7 @@
 .btn[disabled] {
   background-color: $light;
   color: $secondary;
+  cursor: not-allowed;
 }
 
 .btn__info {
