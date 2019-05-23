@@ -25,9 +25,17 @@ export default {
 
 <style lang="scss" scoped>
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+  transition: opacity .3s;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: all .2s;
+}
+.slide-enter, .slide-leave-to {
+  opacity: 0;
+  transform: translateY(-50px);
 }
 </style>
