@@ -20,7 +20,12 @@ const filteredCompanies = (state, { orderedCompanies }) =>
       : companies.filter(company => company.name.toLowerCase().includes(searchTerm.toLowerCase()))
   }
 
+const getSpends = state => state.companies.map(company => company.spend)
+const higherSpending = (state, getters) => Math.max.apply(null, getters.getSpends)
+
 export default {
   filteredCompanies,
+  getSpends,
+  higherSpending,
   orderedCompanies
 }

@@ -29,10 +29,18 @@
   border-color: transparent;
 }
 
-.float--left {
-  float: left;
+.dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
 }
 
-.float--right {
-  float: right;
+.dot--green {
+  background-color: $success;
+}
+
+.dot--gray {
+  background-color: $light;
 }

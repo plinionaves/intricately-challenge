@@ -80,9 +80,9 @@
             <td>{{ company.category }}</td>
             <td :title="formatCurrency(company.spend)">
               <span
-                class="dot dot--gray"
-                v-for="n in 6"
-                :key="n"
+                v-for="(dot, key) in getSpendDots(company.spend)"
+                :key="`${dot}-${key}`"
+                :class="['dot', dot]"
               ></span>
             </td>
           </tr>
@@ -104,7 +104,7 @@ export default {
   name: 'CompanyTable',
   computed: {
     ...mapGetters({ filterCompanies: 'filteredCompanies' }),
-    ...mapGetters(['lowerSpending', 'higherSpending']),
+    ...mapGetters(['higherSpending']),
     filteredCompanies () {
       return this.filterCompanies(this.filters)
     }
@@ -124,8 +124,12 @@ export default {
     formatCurrency (value) {
       return currencyFormatter().format(value)
     },
-    getSpendPercentage (value) {
-
+    getSpendDots (spend) {
+      const percent = spend / this.higherSpending
+      const greenDots = Math.round(6 * percent)
+      return new Array(6)
+        .fill('dot--green', 0, greenDots)
+        .fill('dot--gray', greenDots, 6)
     },
     search (event) {
       this.filters.searchTerm = event.target.value
