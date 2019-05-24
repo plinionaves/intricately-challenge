@@ -7,7 +7,7 @@ export default {
   name: 'AppBreadcrumb',
   computed: {
     breadcrumbs () {
-      return this.$route.fullPath
+      return this.$route.path
         .replace('/', '')
         .split('/')
         .join(' / ')

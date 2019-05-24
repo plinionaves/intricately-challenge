@@ -2,7 +2,8 @@ import {
   CREATE_COMPANY,
   GET_COMPANIES,
   SET_ERROR,
-  SET_LOADING
+  SET_LOADING,
+  SET_SEARCH
 } from './mutation-types'
 
 export default {
@@ -17,5 +18,8 @@ export default {
   },
   [SET_LOADING] (state, { loading }) {
     state.loading = loading
+  },
+  [SET_SEARCH] (state, { search }) {
+    state.search = search
   }
 }

@@ -10,7 +10,8 @@ Vue.use(Vuex)
 const state = {
   companies: [],
   error: undefined,
-  loading: false
+  loading: false,
+  search: undefined
 }
 
 export default new Vuex.Store({

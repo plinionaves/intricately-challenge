@@ -28,5 +28,8 @@ export default {
   },
   setLoading ({ commit }, loading) {
     commit(types.SET_LOADING, { loading })
+  },
+  setSearch ({ commit }, payload) {
+    commit(types.SET_SEARCH, payload)
   }
 }

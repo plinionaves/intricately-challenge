@@ -11,13 +11,13 @@ const orderedCompanies = state =>
     })
 
 const filteredCompanies = (state, { orderedCompanies }) =>
-  ({ searchTerm, field, orderBy }) => {
+  ({ field, orderBy }) => {
     const companies = !field
       ? orderedCompanies()
       : orderedCompanies({ field, orderBy })
-    return !searchTerm
+    return !state.search
       ? companies
-      : companies.filter(company => company.name.toLowerCase().includes(searchTerm.toLowerCase()))
+      : companies.filter(company => company.name.toLowerCase().includes(state.search.toLowerCase()))
   }
 
 const getSpends = state => state.companies.map(company => company.spend)

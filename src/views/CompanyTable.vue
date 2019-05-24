@@ -4,7 +4,8 @@
       <input
         type="search"
         placeholder="Search"
-        @input="search"
+        :value="search"
+        @input="searchAndNavigate"
       >
     </div>
 
@@ -97,12 +98,13 @@
 
 <script>
 
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters, mapState } from 'vuex'
 import { currencyFormatter } from '@/utils'
 
 export default {
   name: 'CompanyTable',
   computed: {
+    ...mapState(['search']),
     ...mapGetters({ filterCompanies: 'filteredCompanies' }),
     ...mapGetters(['higherSpending']),
     filteredCompanies () {
@@ -111,7 +113,6 @@ export default {
   },
   data: () => ({
     filters: {
-      searchTerm: '',
       field: 'name',
       orderBy: 'asc'
     }
@@ -119,8 +120,15 @@ export default {
   created () {
     this.getCompanies()
   },
+  beforeRouteEnter (to, from, next) {
+    next(vm => vm.setSearch({ search: to.query.search }))
+  },
+  beforeRouteUpdate (to, from, next) {
+    this.setSearch({ search: to.query.search })
+    next()
+  },
   methods: {
-    ...mapActions(['getCompanies']),
+    ...mapActions(['getCompanies', 'setSearch']),
     formatCurrency (value) {
       return currencyFormatter().format(value)
     },
@@ -131,8 +139,12 @@ export default {
         .fill('dot--green', 0, greenDots)
         .fill('dot--gray', greenDots, 6)
     },
-    search (event) {
-      this.filters.searchTerm = event.target.value
+    searchAndNavigate ({ target: { value: search } }) {
+      this.setSearch({ search })
+      this.$router.push({
+        path: this.$route.path,
+        query: { search }
+      })
     },
     sort (field, orderBy) {
       this.filters.field = field
