@@ -6,7 +6,6 @@
 }
 
 .form__group {
-  width: 100%;
   label {
     display: block;
     text-transform: uppercase;
@@ -14,8 +13,9 @@
     margin: 5px 0;
   }
   input, textarea {
+    outline: none;
     min-width: 450px;
-    padding: 5px;
+    padding: 5px 10px;
     color: $secondary;
     height: 45px;
     border: 1px solid $light;

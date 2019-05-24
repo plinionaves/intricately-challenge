@@ -42,6 +42,6 @@ export default {
   display: grid;
   min-height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 70px 1fr 150px;
+  grid-template-rows: 70px 1fr 130px;
 }
 </style>

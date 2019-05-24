@@ -7,3 +7,16 @@
 .d-flex {
   display: flex;
 }
+
+.right {
+  text-align: right;
+  right: 0;
+  position: relative;
+  justify-content: end;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}

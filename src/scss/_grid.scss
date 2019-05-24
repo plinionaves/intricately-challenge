@@ -3,13 +3,23 @@
 $grid-columns: 12;
 $grid-gutter: 14px;
 
-.container {
-  width: 1024px;
-  margin: 0 auto;
+.base {
   display: grid;
   grid-template-columns: repeat($grid-columns, 1fr);
   grid-auto-rows: max-content;
+}
+
+.container {
+  @extend .base;
+  width: 1024px;
+  margin: 0 auto;
   grid-gap: $grid-gutter $grid-gutter;
+}
+
+.row {
+  @extend .base;
+  grid-column: span $grid-columns;
+  grid-gap: 5px 5px;
 }
 
 @for $i from 1 to ($grid-columns + 1) {

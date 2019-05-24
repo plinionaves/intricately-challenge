@@ -56,7 +56,7 @@
       <div>
         <button
           type="button"
-          class="btn btn__info"
+          class="btn btn__primary"
           @click="showModal = !showModal"
         >Add Notes</button>
 
@@ -70,7 +70,7 @@
             <span class="spacer"></span>
             <button
               type="button"
-              class="btn btn__info"
+              class="btn btn__primary"
               @click="showModal = !showModal"
             >Save</button>
           </div>
@@ -81,7 +81,7 @@
         <span class="spacer"></span>
         <button
           type="submit"
-          class="btn btn__info"
+          class="btn btn__primary"
           :disabled="$v.$invalid"
         >Save</button>
       </div>
@@ -152,7 +152,7 @@ export default {
           this.companyDisplayValues[field] = this.company[field]
           break
         case 'change':
-          this.company[field] = +value || undefined
+          this.company[field] = (+value > 0) ? +value : undefined
           break
       }
     },

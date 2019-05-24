@@ -4,7 +4,7 @@
 .btn {
   border: none;
   text-align: center;
-  min-width: 100px;
+  min-width: 130px;
   height: 40px;
   border-radius: $radius;
   padding: 10px;
@@ -12,7 +12,11 @@
   font-size: 14px;
   color: $secondary;
   text-transform: uppercase;
-  margin: 5px auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .btn[disabled] {
@@ -21,7 +25,18 @@
   cursor: not-allowed;
 }
 
-.btn__info {
+.btn__primary {
   background-color: $primary;
   color: white;
+}
+
+.btn__primary--light {
+  background-color: $primary-light;
+  color: white;
+}
+
+.btn__toolbar {
+  background-color: transparent;
+  color: white;
+  min-width: 80px;
 }
