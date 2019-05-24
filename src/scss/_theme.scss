@@ -1,6 +1,8 @@
 @import './colors';
 @import './buttons';
+@import './components';
 @import './forms';
+@import './grid';
 @import './reset';
 @import './utils';
 
@@ -11,9 +13,4 @@ h1, h2, h3, h4, h5, h6, p, a, span, div {
 
 p {
   font-size: 1rem;
-}
-
-.box {
-  border: 1px solid $light;
-  border-radius: 10px;
 }

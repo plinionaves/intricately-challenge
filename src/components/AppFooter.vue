@@ -9,9 +9,9 @@
 @import '../scss/colors';
 
 .footer {
-  min-height: 150px;
+  width: 100%;
+  height: 150px;
   background-color: $light;
-  clear: both;
 }
 
 </style>

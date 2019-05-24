@@ -1,0 +1,46 @@
+.box {
+  border: 1px solid $light;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.arrow {
+  width: 0; 
+  height: 0;
+  cursor: pointer;
+  float: right;
+}
+
+.arrow__up {
+  @extend .arrow;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;  
+  border-bottom: 5px solid $secondary;
+}
+
+.arrow__down {
+  @extend .arrow;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;  
+  border-top: 5px solid $secondary;
+}
+
+.arrow--selected {
+  border-color: transparent;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.dot--green {
+  background-color: $success;
+}
+
+.dot--gray {
+  background-color: $light;
+}

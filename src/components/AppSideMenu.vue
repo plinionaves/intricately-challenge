@@ -69,6 +69,7 @@ export default {
 .links__item__link--active {
   border-left: 3px solid $primary;
   color: #333;
+  background-color: $ultra-light;
 }
 
 </style>

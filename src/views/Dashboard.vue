@@ -1,16 +1,14 @@
 <template>
-  <div>
+  <div class="root">
     <AppToolbar />
     <main class="container">
 
-      <section class="row">
-        <AppBreadcrumb class="col-12" />
-      </section>
+      <AppBreadcrumb class="col-12" />
 
-      <section class="row">
+      <section class="col-12 container">
         <AppSideMenu class="col-3" />
-        <AppTransition name="slide">
-        <router-view class="col-9" />
+        <AppTransition name="slide" class="col-9">
+          <router-view />
         </AppTransition>
       </section>
 
@@ -38,3 +36,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.root {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr 150px;
+}
+</style>

@@ -5,8 +5,8 @@
 
 body, html {
   @extend %reset;
-  height: 100vh;
   box-sizing: border-box;
+  height: 100vh;
 }
 
 *,

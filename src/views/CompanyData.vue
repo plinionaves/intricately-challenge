@@ -67,16 +67,18 @@
               v-model.trim="$v.company.note.$model"
               placeholder="e.g. Good Tech Company"
             ></textarea>
+            <span class="spacer"></span>
+            <button
+              type="button"
+              class="btn btn__info"
+              @click="showModal = !showModal"
+            >Save</button>
           </div>
-          <button
-            type="button"
-            class="btn btn__info"
-            @click="showModal = !showModal"
-          >Save</button>
         </Modal>
       </div>
 
-      <div class="form__group">
+      <div class="form__group d-flex">
+        <span class="spacer"></span>
         <button
           type="submit"
           class="btn btn__info"

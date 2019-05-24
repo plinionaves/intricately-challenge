@@ -9,6 +9,7 @@
 @import '../scss/colors';
 
 .toolbar {
+  width: 100%;
   height: 70px;
   background-color: $primary;
 }
