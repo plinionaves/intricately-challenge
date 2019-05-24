@@ -1,34 +1,17 @@
-# intricately-challenge
+# Intricately Challenge
 
-## Project setup
-```
-npm install
-```
+Project developed for the Intricately Challenge.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## How to run
 
-### Compiles and minifies for production
+### REST API
 ```
-npm run build
+cd db
+npm start
 ```
 
-### Run your tests
+### Application
 ```
-npm run test
+npm i
+npm run serve -- --open
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
