@@ -1,8 +1,30 @@
+@import './colors';
+
 .box {
   border: 1px solid $light;
-  border-radius: 10px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.box__title {
+  margin: 0;
   padding: 15px;
-  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.company__logo {
+  width: 55px;
+  height: 55px;
+  padding: 13px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 3px 4px $light;
+  display: inline-block;
+}
+
+.company__logo__img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .arrow {

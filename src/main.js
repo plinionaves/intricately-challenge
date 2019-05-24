@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import '@/filters'
+import '@/plugins/font-awesome'
 import '@/plugins/vuelidate'
 import App from '@/App.vue'
 import router from '@/router'

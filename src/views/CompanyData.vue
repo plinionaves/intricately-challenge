@@ -194,3 +194,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.box {
+  padding: 15px;
+}
+</style>

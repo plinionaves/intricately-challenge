@@ -204,6 +204,10 @@ input {
   tbody tr:nth-child(even) {
     background-color: $ultra-light;
   }
+
+  tbody tr:nth-child(odd) {
+    background-color: white;
+  }
 }
 
 </style>

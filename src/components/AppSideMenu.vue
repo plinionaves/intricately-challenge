@@ -39,6 +39,7 @@ export default {
 .links {
   list-style-type: none;
   border-radius: $radius;
+  background-color: white;
 }
 
 .links__item:first-child {
